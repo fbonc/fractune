@@ -25,6 +25,7 @@ target
 hs_err_pid*
 replay_pid*
 
+/.vscode/
 
 app/target/
 !.mvn/wrapper/maven-wrapper.jar
