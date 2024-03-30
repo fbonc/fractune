@@ -7,7 +7,6 @@
 # BlueJ files
 *.ctxt
 
-target
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -25,7 +24,7 @@ target
 hs_err_pid*
 replay_pid*
 
-/.vscode/
+.vscode/
 
 app/target/
 !.mvn/wrapper/maven-wrapper.jar
