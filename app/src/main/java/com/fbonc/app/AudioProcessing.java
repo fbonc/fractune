@@ -14,7 +14,7 @@ public class AudioProcessing {
 
     public static void main(String[] args) {
         try {
-            String audioFilePath = "bliss.wav";
+            String audioFilePath = "sounds/500hztest.wav";
             File audioFile = new File(audioFilePath);
             AudioDispatcher dispatcher = AudioDispatcherFactory.fromFile(audioFile, 2048, 1024);
             
