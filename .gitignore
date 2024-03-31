@@ -25,6 +25,7 @@ hs_err_pid*
 replay_pid*
 
 .vscode/
+bliss.wav
 
 app/target/
 !.mvn/wrapper/maven-wrapper.jar
