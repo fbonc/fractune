@@ -29,7 +29,9 @@
 ### 1. Tempo
 The overall tempo of the piece could dictate the speed of changes or rotations within the fractal animation, with faster tempos leading to quicker movements.
 
-```tempo, _ = librosa.beat.beat_track(y=y, sr=sr)```
+```
+tempo, _ = librosa.beat.beat_track(y=y, sr=sr)
+```
 
 ### 2. Beat Tracking
 Beats could trigger specific events in the visualization, such as sudden color shifts, shape changes, or the initiation of movement.
@@ -44,23 +46,31 @@ beat_times = librosa.frames_to_time(beat_frames, sr=sr)
 This feature indicates where the "center of mass" for the spectrum is located and can vary with different instruments or sounds. It could control the color palette of the fractal, with lower centroids leading to cooler colors and higher centroids to warmer colors.
 
 
-```spectral_centroids = librosa.feature.spectral_centroid(y=y, sr=sr)[0]```
+```
+spectral_centroids = librosa.feature.spectral_centroid(y=y, sr=sr)[0]
+```
 
 ### 4. Chroma Features
 Chroma features capture the harmonic content of music and can be used to change the fractal's geometry or symmetry in relation to the harmony or chord progressions.
 
-```chroma = librosa.feature.chroma_stft(y=y, sr=sr)```
+```
+chroma = librosa.feature.chroma_stft(y=y, sr=sr)
+```
 
 ### 5. Spectral Bandwidth
 The spectral bandwidth relates to the width of the spectrum and can influence the fractal's complexity or density, with wider bandwidths leading to more complex fractals.
 
-```spectral_bandwidth = librosa.feature.spectral_bandwidth(y=y, sr=sr)[0]```
+```
+spectral_bandwidth = librosa.feature.spectral_bandwidth(y=y, sr=sr)[0]
+```
 
 
 ### 6. Mel-Frequency Cepstral Coefficients (MFCCs)
 MFCCs capture timbral aspects and could be used to modify aspects of the fractal that relate to texture or fine details.
 
-```mfccs = librosa.feature.mfcc(y=y, sr=sr)```
+```
+mfccs = librosa.feature.mfcc(y=y, sr=sr)
+```
 
 
 ## Current plan:
