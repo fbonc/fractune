@@ -73,7 +73,8 @@ mfccs = librosa.feature.mfcc(y=y, sr=sr)
 ```
 
 
-## Current plan:
-- Dynamic Range: Map the dynamic range of the audio (difference between loud and soft parts) to the fractal's zoom level or iteration depth.
-- Rhythm and Temporal Features: Use rhythm detection or onset strength to modulate the fractal's animation speed or to introduce rhythmic visual elements.
-- Harmonic Changes: Use changes in chroma or harmonic content to alter fractal patterns or introduce new elements/colors.
+## Feature significance in the fractal:
+- Tempo: The speed of rotation of the fractal.
+- Spectral Centroids **and** amplitude: Average of the spectral centroid and amplitude at a specific time corresponds to the brightness and glow of the fractal.
+- Onset Strength: New branch or "connection" of the fractal is formed and immediately removed.
+- Chroma: Each of the 12 pitch classes in the chroma vector is associated with a specific shade within a color palette. A more intense pitch class means the fractal displays the color corresponding to the pitch class more intensely.
