@@ -29,7 +29,7 @@ class FeatureExtractor:
     def get_chroma(self):
         return librosa.feature.chroma_stft(y=self.audio, sr=self.sr)
     
-    def get_spectral_bandwitdth(self):
+    def get_spectral_bandwidth(self):
         return librosa.feature.spectral_bandwidth(y=self.audio, sr=self.sr)[0]
     
     def get_mfccs(self):
@@ -43,6 +43,16 @@ audio, sr = audio_loader.load_audio()
 extractor = FeatureExtractor(audio, sr)
 tempo = extractor.get_tempo()
 spectral_centroid = extractor.get_spectral_centroid()
+beat_times = extractor.get_beat_times()
+chroma = extractor.get_chroma()
+spectral_bandwidth = extractor.get_spectral_bandwidth()
+mfccs = extractor.get_mfccs()
 
-print(f"Tempo: {tempo}, Spectral Centroid: {spectral_centroid}")
+
+print(f"---Tempo: {tempo},")
+print(f"---Beat times: {beat_times},")
+print(f"---Spectral Centroid: {spectral_centroid}")
+print(f"---Chroma: {chroma},")
+print(f"---Spectral_bandwidth: {spectral_bandwidth},")
+print(f"---MFCCs: {mfccs},")
 
