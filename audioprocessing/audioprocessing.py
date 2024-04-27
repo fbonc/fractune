@@ -37,17 +37,19 @@ class FeatureExtractor:
     
     def get_mfccs(self):
         return librosa.feature.mfcc(y=self.audio, sr=self.sr)
-
+    
+    # def get_onset_strength(self):
+    # def get_amplitude(self):
 
 if __name__ == "__main__":
 
     def print_features(tempo, beat_times, spectral_centroids, chroma, spectral_bandwidth, mfccs):
-        print(f"---Tempo: {tempo},")
-        print(f"---Beat times: {beat_times},")
-        print(f"---Spectral Centroids: {spectral_centroids}")
-        print(f"---Chroma: {chroma},")
-        print(f"---Spectral_bandwidth: {spectral_bandwidth},")
-        print(f"---MFCCs: {mfccs},")
+        print(f"Tempo: {tempo},")
+        print(f"Beat times: {beat_times},")
+        print(f"Spectral Centroids: {spectral_centroids}")
+        print(f"Chroma: {chroma},")
+        print(f"Spectral_bandwidth: {spectral_bandwidth},")
+        print(f"MFCCs: {mfccs},")
 
     def plot_spectral_centroids(spectral_centroids_times, spectral_centroids):
         plt.figure(figsize=(10, 4))
@@ -67,7 +69,6 @@ if __name__ == "__main__":
         plt.show()
 
 
-    
     audio_loader = AudioLoader(r'audioprocessing\sounds\bliss.wav')
     audio, sr = audio_loader.load_audio()
 
@@ -80,8 +81,9 @@ if __name__ == "__main__":
     mfccs = extractor.get_mfccs()
 
 
-    # print_features(tempo, beat_times, spectral_centroids, chroma, spectral_bandwidth, mfccs)
-    plot_chroma(chroma)
+    print_features(tempo, beat_times, spectral_centroids, chroma, spectral_bandwidth, mfccs)
+    # plot_spectral_centroids(spectral_centroids_times, spectral_centroids)
+    # plot_chroma(chroma)
 
 
     
